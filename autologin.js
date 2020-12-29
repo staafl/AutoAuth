@@ -4,23 +4,17 @@ function doIt() {
   if (location + "" === "https://e-edu.nbu.bg/login/index.php" ||
       location + "" === "https://e-edu.nbu.bg/?redirect=0") {
 
-//    let username = Math.random() + "" // window.localStorage.getItem("username" + ":" + location) || window.prompt("Username?")
     if (!username) {
-    //console.log("here 0")
       return
     }
 
-    let password = Math.random() + "" //window.localStorage.getItem("password" + ":" + username + ":" + location) || window.prompt("password?")
+    let password = Math.random() + ""
 
     if (!password) {
-    //console.log("here 01")
       return
     }
 
-    //console.log("here 1")
-
     try { window.localStorage.setItem("username" + ":" + location, username) } catch (ex) {}
-    //console.log("here 2")
     try { window.localStorage.setItem("password" + ":" + username + ":" + location, password) } catch (ex) {}
 
     const usernameInput = (
